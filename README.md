@@ -5,3 +5,15 @@ SQLite 作者最新开源的 Web 服务器 althttpd，可以先来看下这个�
 我们来看下 althttpd 的代码，项目实际只有一个 c 文件，整体行数也不多，是一个非常不错的学习项目。
 从 althttpd 的设计哲学可以看出来，作者是一个很克制的人，并不是希望去做一个功能非常丰富的 Web 服务器，而是希望 althttpd 在满足功能要求的前提下，能够尽量保持代码的简洁。
 https://sqlite.org/althttpd/doc/trunk/althttpd.md
+
+Source Code
+The complete source code for althttpd is contained within a single C-code file with no dependences outside of the standard C library. The source code file is named "althttpd.c". To build and install althttpd, run the following command:
+
+ gcc -Os -o /usr/bin/althttpd althttpd.c
+The althttpd source code is heavily commented and accessible. It should be relatively easy to customize for specialized needs.
+
+To build althttpd with built-in TLS support using libssl:
+
+gcc -Os -o /usr/bin/althttpd -fPIC -DENABLE_TLS \
+althttpd.c -lssl -lcrypto
+
