@@ -17,3 +17,5 @@ To build althttpd with built-in TLS support using libssl:
 gcc -Os -o /usr/bin/althttpd -fPIC -DENABLE_TLS \
 althttpd.c -lssl -lcrypto
 
+Use：
+althttpd -root $PWD/www/ -port 8088 -user bb
